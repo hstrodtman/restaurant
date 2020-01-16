@@ -1,8 +1,17 @@
 package com.restaurant;
 
-public class Main {
+import java.util.Scanner;
+
+public class Main{
 
     public static void main(String[] args) {
-	// write your code here
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("What item would you like to add to the menu?");
+
+
+
+
     }
 }
