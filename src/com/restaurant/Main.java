@@ -6,12 +6,14 @@ public class Main{
 
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+        System.out.println("This is your restaurant!");
 
-        System.out.println("What item would you like to add to the menu?");
+        Menu menu = new Menu();
 
+        menu.addToMenu();
 
-
-
+        for (MenuItem menuItems : menu.getMenu()) {
+            System.out.println(menuItems.toString());
+        }
     }
 }

@@ -15,18 +15,19 @@ public class Menu {
         this.lastUpdated = LocalDateTime.now();
     }
 
-    private void addToMenu(){
+    public void addToMenu(){
+
         Scanner input = new Scanner(System.in);
         System.out.println("Enter item price.");
         Double price = input.nextDouble();
+        input.nextLine();
         System.out.println("Enter item description.");
         String description = input.nextLine();
         System.out.println("Enter item category: appetizer, main course, or dessert.");
-//        MenuCategory category = input.next();
+        String category = input.nextLine();
         lastUpdated = LocalDateTime.now();
 
-
-//        menu.add(new MenuItem(double price, String description, MenuCategory category, boolean isNew);
+        menu.add(new MenuItem(1,  price, description, category, true));
 
     }
 
