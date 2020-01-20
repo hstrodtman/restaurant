@@ -12,8 +12,13 @@ public class Main{
 
         menu.addToMenu();
 
-        for (MenuItem menuItems : menu.getMenu()) {
-            System.out.println(menuItems.toString());
-        }
+        menu.addToMenu();
+
+        menu.printMenu(menu);
+
+        menu.removeFromMenu(1);
+
+        menu.printMenu(menu);
+
     }
 }

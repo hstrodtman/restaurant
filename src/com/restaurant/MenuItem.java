@@ -9,14 +9,15 @@ public class MenuItem {
     private String category;
     private LocalDateTime dateAdded;
     private boolean isNew;
+    private static int numCreatedMenuItems = 0;
 
-       public MenuItem(int menuId, double price, String description, String category, boolean isNew) {
-           this.menuId = menuId;
+       public MenuItem(double price, String description, String category, boolean isNew) {
            this.price = price;
            this.description = description;
            this.category = category;
            this.isNew = isNew;
            this.dateAdded = LocalDateTime.now();
+           this.menuId = ++numCreatedMenuItems;
        }
 
     public int getMenuId() {

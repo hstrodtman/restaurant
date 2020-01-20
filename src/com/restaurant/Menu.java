@@ -27,16 +27,16 @@ public class Menu {
         String category = input.nextLine();
         lastUpdated = LocalDateTime.now();
 
-        menu.add(new MenuItem(1,  price, description, category, true));
+        menu.add(new MenuItem(price, description, category, true));
 
     }
 
-    private void removeFromMenu(int menuItemId){
-        for(MenuItem item : menu){
-           if (item.getMenuId() == menuItemId) {
-               menu.remove(item);
-               lastUpdated = LocalDateTime.now();
+    void removeFromMenu(int menuId){
+        for( int i = 0; i < menu.size(); i ++) {
+           if (menu.get(i).getMenuId() == menuId) {
+               menu.remove(i);
             }
+            lastUpdated = LocalDateTime.now();
         }
     }
 
@@ -46,6 +46,13 @@ public class Menu {
 
     public LocalDateTime getLastUpdated() {
         return lastUpdated;
+    }
+
+    public void printMenu(Menu menu) {
+        System.out.println(menu.getLastUpdated());
+        for (MenuItem menuItems : menu.getMenu()) {
+            System.out.println(menuItems.toString());
+        }
     }
 
 
